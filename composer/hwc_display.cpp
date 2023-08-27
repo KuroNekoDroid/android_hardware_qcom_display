@@ -1626,10 +1626,6 @@ HWC2::Error HWCDisplay::GetHdrCapabilities(uint32_t *out_num_types, int32_t *out
     uint32_t max_out_types = std::min(*out_num_types, num_types);
     int32_t type = static_cast<int32_t>(Hdr::DOLBY_VISION);
     for (int32_t i = 0; i < max_out_types; i++) {
-      while (type == static_cast<int32_t>(Hdr::DOLBY_VISION) /* Skip list */) {
-        // Skip the type
-        type++;
-      }
       if (type > (num_types + 1)) {
         break;
       }
