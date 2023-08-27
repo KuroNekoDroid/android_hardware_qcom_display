@@ -28,7 +28,7 @@ LOCAL_SHARED_LIBRARIES        := $(common_libs) libqdMetaData libsync libgralloc
                                  android.hardware.graphics.mapper@3.0 \
                                  android.hardware.graphics.mapper@4.0
 LOCAL_CFLAGS                  := $(common_flags) $(qmaa_flags) -DLOG_TAG=\"qdgralloc\" -Wall -Werror \
-                                 -D__QTI_DISPLAY_GRALLOC__
+                                 -D__QTI_DISPLAY_GRALLOC__ -Ofast
 LOCAL_CLANG                   := true
 LOCAL_ADDITIONAL_DEPENDENCIES := $(common_deps)
 LOCAL_SRC_FILES               := gr_device_impl.cpp

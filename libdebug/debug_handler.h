@@ -40,7 +40,7 @@
     DLOG(method, format, ##__VA_ARGS__); \
   }
 
-#define DLOGE_IF(tag, format, ...) DLOG_IF(tag, Error, format, ##__VA_ARGS__)
+#define DLOGE_IF(tag, format, ...) do {} while(0)
 #define DLOGW_IF(tag, format, ...) DLOG_IF(tag, Warning, format, ##__VA_ARGS__)
 #define DLOGI_IF(tag, format, ...) DLOG_IF(tag, Info, format, ##__VA_ARGS__)
 #define DLOGD_IF(tag, format, ...) DLOG_IF(tag, Debug, format, ##__VA_ARGS__)
@@ -49,14 +49,12 @@
 #define DLOGE(format, ...) DLOG(Error, format, ##__VA_ARGS__)
 #define DLOGW(format, ...) DLOG(Warning, format, ##__VA_ARGS__)
 #define DLOGI(format, ...) DLOG(Info, format, ##__VA_ARGS__)
-#define DLOGD(format, ...) DLOG(Debug, format, ##__VA_ARGS__)
-#define DLOGV(format, ...) DLOG(Verbose, format, ##__VA_ARGS__)
+#define DLOGD(format, ...) do {} while(0)
+#define DLOGV(format, ...) do {} while(0)
 
-#define DTRACE_BEGIN(custom_string) display::DebugHandler::Get()->BeginTrace( \
-                                          __CLASS__, __FUNCTION__, custom_string)
-#define DTRACE_END() display::DebugHandler::Get()->EndTrace()
-#define DTRACE_SCOPED() display::ScopeTracer <display::DebugHandler> \
-                                          scope_tracer(__CLASS__, __FUNCTION__)
+#define DTRACE_BEGIN(custom_string) do {} while(0)
+#define DTRACE_END() do {} while(0)
+#define DTRACE_SCOPED() do {} while(0)
 
 namespace display {
 
