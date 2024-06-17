@@ -58,7 +58,7 @@ int main(int, char **) {
     return -EINVAL;
   }
 
-  configureRpcThreadpool(4, true /*callerWillJoin*/);
+  configureRpcThreadpool(8, true /*callerWillJoin*/);
   if (composer->registerAsService() != android::OK) {
     ALOGE("Cannot register QTI composer service");
     return -EINVAL;
