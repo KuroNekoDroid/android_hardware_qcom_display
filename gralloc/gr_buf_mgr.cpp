@@ -75,7 +75,7 @@ static void unmapAndReset(private_handle_t *handle, uint64_t reserved_region_siz
 
 static int validateAndMap(private_handle_t *handle, uint64_t reserved_region_size = 0) {
   if (private_handle_t::validate(handle)) {
-    ALOGE("%s: Private handle is invalid - handle:%p", __func__, handle);
+ //   ALOGE("%s: Private handle is invalid - handle:%p", __func__, handle);
     return -1;
   }
   if (handle->fd_metadata < 0) {
